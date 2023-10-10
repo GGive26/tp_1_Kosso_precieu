@@ -5,11 +5,11 @@ function PasswordLength($Password){
     $responses="";
     $collect="reussi";
     if ($length<6){
-       echo $responses='Le mot de passe ne correspond pas aux critères'
+       echo"<h3>ERREUR</h3>". $responses='Le mot de passe ne correspond pas aux critères'
         ;
     }
     elseif($length>10){
-       echo $responses ='Le mot de passe ne correspond pas aux critères';
+       echo"<h3>ERREUR</h3>".$responses ='Le mot de passe ne correspond pas aux critères';
     } 
     return $responses; 
 }
@@ -21,7 +21,7 @@ function addSAlt($cle){
     return $saltedName;
 }
 function codage($cle){
-    $EncodName= sha1($cle);
-    return $EncodName;
+    $codage=sha1($cle);
+    echo $codage;
 }
 ?>

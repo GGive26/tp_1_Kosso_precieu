@@ -5,9 +5,8 @@ $cle1=$_POST['confirmation'];
 if ($_POST){ 
     function Encodage($cle){
         $precieu= addSAlt($cle);
-        echo$precieu;
-        echo"<br";
-        codage($cle);
+        echo$precieu;?><br><br><?php
+        codage($precieu);
     }
 function verification(){
     $cle = $_POST['password'];
@@ -21,8 +20,6 @@ function verification(){
         echo"<br>Votre mot de passe est : ".$cle;
         $success=true;
     }
-    echo"<br>";
-    echo"<br>";
     if($success){
     $verification1= PasswordLength($cle);
      if(!$verification1){
