@@ -1,6 +1,7 @@
 <?php
 require_once('widgets.php');
 $cle = $_POST['password'];
+$cle1=$_POST['confirmation'];
 if ($_POST){ 
     function Encodage($cle){
         $precieu= addSAlt($cle);
@@ -10,8 +11,10 @@ if ($_POST){
     }
 function verification(){
     $cle = $_POST['password'];
+    $cle1=$_POST['confirmation'];
+    if($cle===$cle1){
     if(empty($cle)){
-        echo"<br>Vous n'avez pas entrer de mot de passe ";
+        echo"<h3>ERREUR</h3><br>Vous n'avez pas entrer de mot de passe ";
         $success=false;
     }
     else{
@@ -30,8 +33,10 @@ function verification(){
      echo"<br>";
      }
     }
-    else{ echo"Veuillez retourner sur la page précedente et entrer un mot de passe valide ";
+    else{ echo"<h3>ERREUR</h3>Veuillez retourner sur la page précedente et entrer un mot de passe valide ";
     }
+}
+else if($cle!=$cle1) echo"<h3>ERREUR</h3><p>Vos deux mot de passe ne sont pas identique veuillez le réecrire correctement</p>";
 }
 verification();
 }

@@ -11,8 +11,10 @@
         <li>Votre mot de passe doit contenir entre 6 et 10 caractere</li>
     </ul>
     <form method="post" action="verification.php">
-        <label for="Password">Mot de Passe </label>
+        <label for="Password">Nouveau Mot de Passe </label>
         <input type="text" name="password" id="password"><br><br>
+        <label for="confirmation">confirmation Mot de Passe </label>
+        <input type="text" name="confirmation" id="confirmation"><br><br>
         <input type="submit" value="Suivant">
         
     </form>
