@@ -15,8 +15,7 @@
         <input type="text" name="password" id="password"><br><br>
         <label for="confirmation">confirmation Mot de Passe </label>
         <input type="text" name="confirmation" id="confirmation"><br><br>
-        <input type="submit" value="Suivant">
-        
+        <input type="submit" value="Suivant">     
     </form>
 </body>
 </html>

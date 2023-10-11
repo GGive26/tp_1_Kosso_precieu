@@ -22,6 +22,6 @@ function addSAlt($cle){
 }
 function codage($cle){
     $codage=sha1($cle);
-    echo $codage;
+    return $codage;
 }
 ?>
